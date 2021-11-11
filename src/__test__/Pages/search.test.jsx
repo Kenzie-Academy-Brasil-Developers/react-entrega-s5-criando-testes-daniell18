@@ -5,10 +5,10 @@ describe("Input Component", () => {
     render(<Search />);
     const inputField = screen.getByPlaceholderText("Insira o CEP");
     const buttonField = screen.getByText("Buscar pelo CEP");
-    // fireEvent.change(inputField, { target: { value: "26910000" } });
-    // // await waitFor(() => {
-    // //   expect(inputField.value).toBeTruthy();
-    // // });
+    fireEvent.change(inputField, { target: { value: "26910000" } });
+    await waitFor(() => {
+      expect(inputField.value).toBeTruthy();
+    });
     fireEvent.click(buttonField);
   });
 });
