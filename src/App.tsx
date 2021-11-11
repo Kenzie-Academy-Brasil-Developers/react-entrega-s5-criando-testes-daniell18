@@ -11,7 +11,6 @@ function App() {
     <div className="App">
       <Toaster />
       <Search />
-      <Address />
     </div>
   );
 }
